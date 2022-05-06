@@ -13,8 +13,12 @@
 	--logo-text-color:#000000;
 	--primary-bg-color: #FFFFFF;
 	--header-footer-bg-color: #2F303A;
+	--team-bg-color:#F5F4FA;
+	--header-bot-border: #ECECEC;
+	--portfolio-cards: #EEEEEE;
 }
 
+/* Common styles */
 body{
   color: var(--primary-text-color);
 	background-color: var(--primary-bg-color); 
@@ -23,12 +27,35 @@ body{
 	letter-spacing: 0.03em;
 }
 
+h1, h2, h3, h4, h5, h6, p, section{
+	margin: 0;
+}
+
+img{
+	display: block;
+}
+
 address{
 	font-style: normal;
 }
 
 .list{
 	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.section {
+	padding-top: 94px;
+	padding-bottom: 94px;
+}
+
+.container {
+	width: 1200px;
+	padding-left: 15px;
+	padding-right: 15px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 /* Button */
@@ -43,6 +70,12 @@ address{
 	align-items: center;
 	text-align: center;
 	letter-spacing: 0.06em;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-right: 32px;
+	padding-left: 32px;
+	border: none;
+	border-radius: 6px;
 }
 
 .button.order{
@@ -74,24 +107,59 @@ button.primary{
 }
 
 button.secondary{
-		font-family: inherit;
-		font-style: normal;
-		font-weight: 500;
-		font-size: 16px;
-		line-height: 1.62;
-		text-align: center;
-		letter-spacing: inherit;
-		color: var(--title-text-color);
+	font-family: inherit;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 1.62;
+	text-align: center;
+	letter-spacing: inherit;
+	color: var(--title-text-color);
 }
 
 
 /* Header */
+/* .hero, .our-features{
+	outline: 2px solid red;
+} */
+
+.header{
+	border-bottom: 1px solid var(--header-bot-border);
+}
+
+.header > .container{
+	display: flex;
+	align-items: center;
+	margin-right: auto;
+	min-height: 80px;
+}
+
+.site-nav.list{
+	display: flex;
+	align-items: center;
+}
+
+.list{
+	display: flex;
+	align-items: center;
+	margin-left: auto;
+}
+
+.list-item{
+	margin-right: 50px;
+}
+
+.list-item:last-child {
+	margin-right: 0;
+}
+
 .logo {
 	color: var(--logo-text-color);
 	font-family: Raleway, sans-serif;
 	font-weight: 700;
 	font-size: 26px;
 	line-height: 1.19;
+	margin-right: 93px;
 }
 
 .logo-web {
@@ -104,7 +172,9 @@ button.secondary{
 }
 
 .header a,
-.portfolio-page
+.portfolio-page, 
+.footer-address,
+.footer-link
  {
 	color: var(--title-text-color);
 	text-decoration: none;
@@ -126,8 +196,18 @@ button.secondary{
 	font-weight: 500;
 	line-height: 1.14;
 	letter-spacing: 0.02em;
+	padding-top: 32px;
+	padding-bottom: 32px;
+	display: block;
 }
 
+.nav-item{
+	margin-right: 50px;
+}
+
+.nav-item:last-child{
+	margin-right: 0;
+}
 
 .site-nav .link.current {
 	color: var(--accent-text-color);
@@ -161,11 +241,15 @@ button.secondary{
 	letter-spacing: 0.02em;
 }
 
+
 /* Hero */
 .hero{
 	background-color: var(--header-footer-bg-color);
 	color: var(--secondary-text-color);
 	text-align: center;
+	min-height: 600px;
+	padding-top: 200px;
+	padding-bottom: 280px;
 }
 
 .hero-title{
@@ -177,6 +261,7 @@ button.secondary{
 	text-align: center;
 	letter-spacing: 0.06em;
 	text-transform: uppercase;
+	margin-bottom: 30px;
 }
 
 .visually-hidden{
@@ -193,6 +278,19 @@ button.secondary{
 }
 
 /* Features */
+.features-container{
+	display: flex;
+	align-items: center;
+}
+
+.features-item{
+	margin-right: 30px;
+}
+
+.features-item:last-child {
+	margin-right: 0;
+}
+
 .features.section-title{
 	font-family: 'Roboto';
 	font-style: normal;
@@ -209,13 +307,55 @@ button.secondary{
 	line-height: 1.71;
 }
 
+/* What we do */
+.what-we-do{
+	padding-top: 0;;
+}
+
+.do-title{
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+.do-list{
+	display: flex;
+	align-items: center;
+}
+
+.do-item{
+	margin-right: 30px;
+}
+
+.do-item:last-child {
+	margin-right: 0;
+}
+
+
 /* Team */
+.section.team{
+	background-color: var(--team-bg-color);
+}
+
+.team .section-title{
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+.member-description{
+	background-color: var(--primary-bg-color);
+	border-radius: 0px 0px 4px 4px;
+	padding-bottom: 30px;
+	padding-top: 30px;
+}
+
 .member-name{
 	font-weight: 500;
 	font-size: 16px;
 	line-height: 1.19;
 	letter-spacing: 0.03em;
 	color: var(--title-text-color);
+	text-align: center;
+	margin-bottom: 10px;
 }
 
 .member-position{
@@ -224,6 +364,20 @@ button.secondary{
 	line-height: 1.19;
 	letter-spacing: 0.03em;
 	color: var(--primary-text-color);
+	text-align: center;
+}
+
+.members{
+	display: flex;
+	align-items: center;
+}
+
+.team-member{
+	margin-right: 30px;
+}
+
+.team-member:last-child {
+	margin-right: 0;
 }
 
 /* Portfolio */
@@ -234,16 +388,89 @@ button.secondary{
 	line-height: 1.88;
 }
 
+.portfolio-title{
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 2.0;
+	letter-spacing: 0.06em;
+	color: var(--title-text-color);
+}
+
+.portfolio .link{
+	padding-top: 6px;
+	padding-bottom: 6px;
+	padding-right: 22px;
+	padding-left: 22px;
+	border: none;
+	border-radius: 6px;
+}
+
+.projects.list{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 94px;
+	padding-bottom: 50px;
+	margin: 0;
+}
+
+.project-item{
+	margin-right: 8px;
+}
+
+.project-item:last-child{
+	margin-right: 0;
+}
+
+.projects-cards{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.card-item{
+	margin-right: 30px;
+	margin-bottom: 30px;
+}
+
+.card-item:nth-child(3n+0){
+	margin-right: 0;
+}
+
+.card-item:nth-last-child(-n+3){
+	margin-bottom: 0;
+}
+
+.portfolio{
+	padding-bottom: 94px;
+}
+
+.card-description{
+	border-bottom: 1px solid var(--portfolio-cards);
+	border-right: 1px solid var(--portfolio-cards);
+	border-left: 1px solid var(--portfolio-cards);
+	padding: 20px 24px;
+}
+
+.portfolio-title{
+	margin-bottom: 4px;
+}
+
 
 /* Footer */
 .footer{
 	background-color: var(--header-footer-bg-color);
+	padding-bottom: 60px;
+	padding-top: 60px;
 }
 
 .footer-logo{
 	color: var(--secondary-text-color);
 	text-decoration: none;
 }
+
+
 
 a.footer-address {
 	font-weight: 400;
@@ -259,4 +486,19 @@ a.footer-link{
 	line-height: 1.71;
 	letter-spacing: 0.03em;
 	color: var(--primary-text-color);
+	margin-bottom: 9px;
 }
+
+.address-list{
+	display: block;
+}
+
+.footer .footer-logo{
+	display: block;
+	margin-bottom: 20px;
+}
+
+.address-item{
+	margin-bottom: 9px;
+}
+
