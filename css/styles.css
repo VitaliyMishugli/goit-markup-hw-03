@@ -493,7 +493,6 @@ a.footer-link{
 	line-height: 1.71;
 	letter-spacing: 0.03em;
 	color: var(--primary-text-color);
-	margin-bottom: 9px;
 }
 
 .address-list{
@@ -503,6 +502,10 @@ a.footer-link{
 .footer .footer-logo{
 	display: block;
 	margin-bottom: 20px;
+}
+
+.address-item:not(:last-child){
+	margin-bottom: 9px;
 }
 
 
