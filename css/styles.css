@@ -247,14 +247,12 @@ button.secondary{
 	background-color: var(--header-footer-bg-color);
 	color: var(--secondary-text-color);
 	text-align: center;
-	min-height: 600px;
 	padding-top: 200px;
-	padding-bottom: 280px;
+	padding-bottom: 200px;
 }
 
 .hero-title{
 	color: var(--secondary-text-color);
-	font-style: normal;
 	font-weight: 900;
 	font-size: 44px;
 	line-height: 1.36;
@@ -293,18 +291,22 @@ button.secondary{
 
 .features.section-title{
 	font-family: 'Roboto';
-	font-style: normal;
+	/* font-style: normal; */
 	font-weight: 700;
 	font-size: 14px;
 	line-height: 1.14;
 	letter-spacing: 0.03em;
 	text-transform: uppercase;
 	color: var(--title-text-color);
+
+	margin-bottom: 10px;
 }
 
 .features-description{
 	font-size: 14px;
 	line-height: 1.71;
+
+	width: 270px;
 }
 
 /* What we do */
@@ -374,6 +376,8 @@ button.secondary{
 
 .team-member{
 	margin-right: 30px;
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+	border-radius: 0px 0px 4px 4px;
 }
 
 .team-member:last-child {
@@ -381,6 +385,10 @@ button.secondary{
 }
 
 /* Portfolio */
+.portfolio-header{
+	margin-bottom: 94px;
+}
+
 .portfolio-name{
 	color: var(--primary-text-color);
 	font-weight: 400;
@@ -409,9 +417,8 @@ button.secondary{
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	padding-top: 94px;
-	padding-bottom: 50px;
-	margin: 0;
+	/* padding-top: 94px; */
+	margin-bottom: 50px;
 }
 
 .project-item{
@@ -434,7 +441,7 @@ button.secondary{
 	margin-bottom: 30px;
 }
 
-.card-item:nth-child(3n+0){
+.card-item:nth-child(3n){
 	margin-right: 0;
 }
 
@@ -498,7 +505,4 @@ a.footer-link{
 	margin-bottom: 20px;
 }
 
-.address-item{
-	margin-bottom: 9px;
-}
 
