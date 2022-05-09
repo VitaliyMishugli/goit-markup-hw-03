@@ -385,8 +385,8 @@ button.secondary{
 }
 
 /* Portfolio */
-.portfolio-header{
-	margin-bottom: 94px;
+.portfolio-section{
+	padding-top: 94px;
 }
 
 .portfolio-name{
